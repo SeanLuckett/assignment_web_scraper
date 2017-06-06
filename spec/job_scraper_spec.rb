@@ -18,7 +18,7 @@ RSpec.describe JobScraper do
 
   describe 'parsing' do
     describe 'results' do
-      let(:job) { scraper.parse[1] }
+      let(:job) { scraper.parse.first }
 
       it 'has a job title' do
         expected_title = 'High Paying Full Stack Engineer ( React/Rails)'
