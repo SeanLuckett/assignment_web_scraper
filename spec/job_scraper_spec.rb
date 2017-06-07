@@ -51,7 +51,8 @@ RSpec.describe JobScraper do
       end
 
       it 'has a posting date' do
-        expect(Date.parse(job.posted_on)).to be_a_kind_of Date
+        expected_date = 8.hours.ago.strftime('%a, %b %d, %Y')
+        expect(job).to have_attributes posted_on: expected_date
       end
     end
   end
